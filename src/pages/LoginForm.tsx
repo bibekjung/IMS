@@ -21,7 +21,6 @@ const LoginForm = () => {
 
     try {
       const response = await FetchLoginUser(email, password);
-      console.log("Login Response:", response);
 
       if (response.status === 200 && response.data?.token) {
         const { token, role } = response.data;
@@ -32,7 +31,6 @@ const LoginForm = () => {
       }
     } catch (err) {
       setError("Login failed. Please try again.");
-      console.error("Login Error:", err);
     } finally {
       setLoading(false);
     }

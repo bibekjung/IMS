@@ -54,7 +54,6 @@ export const fetchLogout = async () => {
 
     return response.data;
   } catch (error) {
-    console.error("Logout Error:", error);
     throw error;
   }
 };

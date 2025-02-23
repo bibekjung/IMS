@@ -33,7 +33,7 @@ export default function UserForm() {
           setValue("email", user.email);
           setValue("role", user.role || "User");
         } catch (error) {
-          console.error("Error fetching user:", error);
+          return error;
         }
       };
       fetchUser();

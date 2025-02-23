@@ -15,7 +15,6 @@ const ProtectedRoute = ({ allowedRoles, children }: ProtectedRouteProps) => {
 
   useEffect(() => {
     if (!user?.token || !user.role || !allowedRoles.includes(user.role)) {
-      console.warn("Access denied for role:", user.role);
       navigate("/");
     }
   }, [user, allowedRoles, navigate]);

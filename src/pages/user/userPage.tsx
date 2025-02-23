@@ -45,7 +45,6 @@ export default function UserPage() {
         setFilteredUsers(data);
       } catch (error) {
         setError("Failed to load user data");
-        console.error(error);
       } finally {
         setLoading(false);
       }
@@ -63,7 +62,7 @@ export default function UserPage() {
           prevUsers.filter((user) => user.id !== userId)
         );
       } catch (error) {
-        console.error("Error deleting user:", error);
+        return error;
       }
     }
   };

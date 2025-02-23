@@ -8,7 +8,6 @@ export const getAllUser = async () => {
 
     return response.data;
   } catch (error) {
-    console.error("Login API Error:", error);
     throw error;
   }
 };
@@ -21,7 +20,6 @@ export const createUser = async (userData: any) => {
     );
     return response.data;
   } catch (error) {
-    console.error("Create User API Error:", error);
     throw error;
   }
 };
@@ -33,7 +31,6 @@ export const deleteUser = async (userId: any) => {
     );
     return response.data;
   } catch (error) {
-    console.error("Delete User API Error:", error);
     throw error;
   }
 };
@@ -45,7 +42,6 @@ export const getUserById = async (userId: any) => {
     );
     return response.data;
   } catch (error) {
-    console.error("Get User By ID API Error:", error);
     throw error;
   }
 };
@@ -58,7 +54,6 @@ export const updateUser = async (userId: any, data: any) => {
     );
     return response.data;
   } catch (error) {
-    console.error("Error updating user:", error);
     throw error;
   }
 };
